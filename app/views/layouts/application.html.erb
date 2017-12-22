@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Eigopost</title>
+    <title>EigoPost</title>
     <%= csrf_meta_tags %>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <div class="container">
+      <ul class="nav nav-tabs">
+        <li><%= link_to "EigoPost", root_path %></li>
+        <li><%= link_to "about", home_about_path%></li>
+      </ul>
+
     <%= yield %>
+
+  </div>
   </body>
 </html>
