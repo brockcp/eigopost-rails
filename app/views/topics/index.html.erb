@@ -1,0 +1,7 @@
+<h1>Topics#index</h1>
+<% @topics.each do |brock| %>
+  <%= link_to brock.name, brock %>
+  <br>
+<% end %>
+
+<%= link_to "New Topic", new_topic_path, class: "btn btn-success" %>  
