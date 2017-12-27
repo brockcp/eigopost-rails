@@ -1,17 +1,14 @@
 <h1>Topics#show</h1>
-<%= @topic.name %>
+<h2 class="media_header"><%= @topic.name %>
 <br>
-<%= @topic.description %>
+<%= @topic.description %></h2>
 <br>
-
 
 <% @topic.posts.each do |post| %>
   <%= link_to post.title, topic_post_path(@topic, post) %>
   <br>
   <% end %>
 
-
-
 <br>
-<%= link_to "New Topic", new_topic_path, class: "btn btn-success" %>
 <%= link_to "New Post", new_topic_post_path(@topic), class: 'btn btn-success' %>
+<%= link_to "Delete Topic", @topic, method: :delete, class: 'btn btn-danger', data: { confirm: 'Delete?' } %>

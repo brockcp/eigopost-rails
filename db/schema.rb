@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20171224042542) do
 
   create_table "topics", force: :cascade do |t|
     t.string "name"
-    t.boolean "public"
+    t.boolean "public", default: false
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
