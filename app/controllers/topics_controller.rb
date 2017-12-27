@@ -22,9 +22,11 @@ class TopicsController < ApplicationController
       redirect_to @topic
     else
       flash[:alert] = "Not Saved"
+      render :edit
     end
   end
 
   def edit
+    @topic = Topic.find(params[:id])
   end
 end
