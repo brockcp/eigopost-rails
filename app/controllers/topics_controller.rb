@@ -17,6 +17,7 @@ class TopicsController < ApplicationController
     @topic.name = params[:topic][:name]
     @topic.description = params[:topic][:description]
     @topic.public = params[:topic][:public]
+    @topic.user = current_user
     if @topic.save
       flash[:notice] = "Saved"
       redirect_to @topic
