@@ -3,4 +3,4 @@
   <br>
 <%= @post.body %></p>
 <%= link_to "edit", edit_topic_post_path(@post.topic, @post), class: "btn btn-success" %>
-<%= link_to "delete", [@post.topic, @post], method: :delete, class: 'btn btn-warning', data: { confirm: "Sure?" } %>
+<%= link_to "delete", [@post.topic, @post], method: :delete, class: 'btn btn-danger', data: { confirm: "Sure?" } %>

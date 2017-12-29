@@ -21,8 +21,8 @@ class TopicsController < ApplicationController
       flash[:notice] = "Saved"
       redirect_to @topic
     else
-      flash[:alert] = "Not Saved"
-      render :edit
+      flash.now[:alert] = "Not Saved"
+      render :new
     end
   end
 
@@ -30,11 +30,24 @@ class TopicsController < ApplicationController
     @topic = Topic.find(params[:id])
   end
 
+  def update
+    @topic = Topic.find(params[:id])
+    @topic.name = params[:topic][:name]
+    @topic.description = params[:topic][:description]
+    if @topic.save
+      flash[:notice] = "Saved!"
+      redirect_to @topic
+    else
+      flash.now[:alert] = "Error!"
+      render :edit
+    end
+  end
+
   def destroy
     @topic = Topic.find(params[:id])
     if @topic.destroy
       flash[:notice] = "\"#{@topic.name}\" was deleted."
-      redirect_to action: :index
+      redirect_to @topic
     else
       flash.now[:alert] = "Couldnt delete."
       render :show
