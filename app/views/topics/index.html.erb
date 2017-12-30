@@ -1,7 +1,26 @@
-<h1>Topics#index</h1>
-<% @topics.each do |b| %>
-  <%= link_to b.name, b %>
-  <br>
-<% end %>
+<h1>EigoPost Topics</h1>
 
-<%= link_to "New Topic", new_topic_path, class: "btn btn-success" %>
+<div class="row">
+  <div class="col-md-8">
+    <% @topics.each do |t| %>
+      <div class="media">
+        <div class="media-body">
+          <h4 class="media-heading">
+            <%= link_to t.name, t %>
+          </h4>
+            <p class="lead">
+              <%= truncate(t.description, :length => 70) %>
+            </p>
+            <small>
+              submitted <%= time_ago_in_words(t.created_at) %>
+              ago by <%= t.user_id %>
+            </small>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+<br>
+<%= link_to "New Topic", new_topic_path,
+    class: "btn btn-success" %>
+</div>

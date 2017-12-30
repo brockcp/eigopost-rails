@@ -1,4 +1,4 @@
-<h1>Topics Form</h1>
+<h2> Start a New Topic</h2>
 <%= form_for topic do |f| %>
   <% if topic.errors.any? %>
     <div class="alert alert-danger">
@@ -23,7 +23,7 @@
 
   <div class="form-group" %>
     <%= f.label :public, class: 'checkbox' do %>
-      <%= f.check_box :public %> Public topic
+      <%= f.check_box :public %> Private Topic
     <% end %>
   </div>
 

@@ -1,6 +1,7 @@
-<h1>Posts#show</h1>
-<p class="media-header"><%= @post.title %>
-  <br>
-<%= @post.body %></p>
+<br>
+<h3><%= @post.title %></h3>
+<p class="c"><%= @post.body %></p>
+<br>
+<%= link_to "Back to All Posts", topic_path(@post.topic, @post), class: "btn btn-primary" %>
 <%= link_to "edit", edit_topic_post_path(@post.topic, @post), class: "btn btn-success" %>
 <%= link_to "delete", [@post.topic, @post], method: :delete, class: 'btn btn-danger', data: { confirm: "Sure?" } %>
