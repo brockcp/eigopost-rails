@@ -13,7 +13,7 @@
             </p>
             <small>
               submitted <%= time_ago_in_words(t.created_at) %>
-              ago by <%= t.user_id %>
+              ago by <%= t.user.username %>
             </small>
         </div>
       </div>
