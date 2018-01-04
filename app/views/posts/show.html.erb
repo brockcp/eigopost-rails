@@ -1,3 +1,4 @@
+<h1>Posts#Showsy</h1>
 <h2 class="media_header">
   <%= @post.name %>
 </h2>
@@ -5,17 +6,18 @@
 <%= @post.description %>
 </p>
 
-<%# @post.comments.each do |p| %>
-  <h4 class="b"><%#= link_to p.title, post_comment_path(@post, comment) %></h4>
+<% @post.comments.each do |p| %>
+  <h4 class="b"><%= p.body %></h4>
   <small>
-   submitted <%#= time_ago_in_words(p.created_at) %>
+   submitted <%= time_ago_in_words(p.created_at) %> ago
    <br>
-   ago by <%#= p.user_id %>
+   by <%= p.user.username %>
  </small>
  <br>
-<%# end %>
+<% end %>
 
-<br>
+<%= link_to "New COMMENT", new_post_comment_path(@post), class: 'btn btn-success' %>
+<br><br>
 <li class="pp"><%= link_to "Back to Topics", posts_path, class: "pp" %></li>
-<%= link_to "New Post", new_post_comment_path(@post), class: 'btn btn-success' %>
+
 <%# link_to "Delete Topic", @post, method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure you want to Delete?' } %>

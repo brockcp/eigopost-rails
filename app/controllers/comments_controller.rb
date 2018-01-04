@@ -11,14 +11,13 @@ class CommentsController < ApplicationController
 
     def create
       @comment = Comment.new
-      @comment.title = params[:comment][:title]
       @comment.body = params[:comment][:body]
       @post = Post.find(params[:post_id])
       @comment.user = current_user
       @comment.post = @post
       if @comment.save
         flash[:notice] = "Saved"
-        redirect_to [@post, @comment]
+        redirect_to @post
       else
         flash.now[:alert] = "Not Saved"
         render :new
@@ -31,7 +30,6 @@ class CommentsController < ApplicationController
 
     def update
       @comment = Comment.find(params[:id])
-      @comment.title = params[:comment][:title]
       @comment.body = params[:comment][:body]
       if @comment.save
         flash[:notice] = "Saved!"
