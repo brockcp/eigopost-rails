@@ -1,7 +1,21 @@
+<h2 class="media_header">
+  <%= @post.name %>
+</h2>
+<p>
+<%= @post.description %>
+</p>
+
+<%# @post.comments.each do |p| %>
+  <h4 class="b"><%#= link_to p.title, post_comment_path(@post, comment) %></h4>
+  <small>
+   submitted <%#= time_ago_in_words(p.created_at) %>
+   <br>
+   ago by <%#= p.user_id %>
+ </small>
+ <br>
+<%# end %>
+
 <br>
-<h3><%= @post.title %></h3>
-<p class="c"><%= @post.body %></p>
-<br>
-<%= link_to "Back to All Posts", topic_path(@post.topic, @post), class: "btn btn-primary" %>
-<%= link_to "edit", edit_topic_post_path(@post.topic, @post), class: "btn btn-success" %>
-<%= link_to "delete", [@post.topic, @post], method: :delete, class: 'btn btn-danger', data: { confirm: "Sure?" } %>
+<li class="pp"><%= link_to "Back to Topics", posts_path, class: "pp" %></li>
+<%= link_to "New Post", new_post_comment_path(@post), class: 'btn btn-success' %>
+<%# link_to "Delete Topic", @post, method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure you want to Delete?' } %>

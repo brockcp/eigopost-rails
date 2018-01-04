@@ -1,56 +1,58 @@
 class PostsController < ApplicationController
 
-  def show
-    @post = Post.find(params[:id])
-  end
-
-  def new
-    @topic = Topic.find(params[:topic_id])
-    @post = Post.new
-  end
-
-  def create
-    @post = Post.new
-    @post.title = params[:post][:title]
-    @post.body = params[:post][:body]
-    @topic = Topic.find(params[:topic_id])
-    @post.user = current_user
-    @post.topic = @topic
-    if @post.save
-      flash[:notice] = "Saved"
-      redirect_to [@topic, @post]
-    else
-      flash.now[:alert] = "Not Saved"
-      render :new
+    def index
+      @posts = Post.all
     end
-  end
 
-  def edit
-    @post = Post.find(params[:id])
-  end
-
-  def update
-    @post = Post.find(params[:id])
-    @post.title = params[:post][:title]
-    @post.body = params[:post][:body]
-    if @post.save
-      flash[:notice] = "Saved!"
-      redirect_to [@post.topic, @post]
-    else
-      flash.now[:alert] = "Error!"
-      render :edit
+    def show
+      @post = Post.find(params[:id])
     end
-  end
 
-  def destroy
-    @post = Post.find(params[:id])
-    if @post.destroy
-      flash[:notice] = "\"#{@post.title}\" was deleted."
-      redirect_to @post.topic
-    else
-      flash.now[:alert] = "post deleted."
-      render :show
+    def new
+      @post = Post.new
     end
-  end
 
-end
+    def create
+      @post = Post.new
+      @post.name = params[:post][:name]
+      @post.description = params[:post][:description]
+      @post.public = params[:post][:public]
+      @post.user = current_user
+      if @post.save
+        flash[:notice] = "Saved"
+        redirect_to @post
+      else
+        flash.now[:alert] = "Not Saved"
+        render :new
+      end
+    end
+
+    def edit
+      @post = Post.find(params[:id])
+    end
+
+    def update
+      @post = Post.find(params[:id])
+      @post.name = params[:post][:name]
+      @post.description = params[:post][:description]
+      if @post.save
+        flash[:notice] = "Saved!"
+        redirect_to @post
+      else
+        flash.now[:alert] = "Error!"
+        render :edit
+      end
+    end
+
+    def destroy
+      @post = Post.find(params[:id])
+      if @post.destroy
+        flash[:notice] = "\"#{@post.name}\" was deleted."
+        redirect_to @post
+      else
+        flash.now[:alert] = "Couldnt delete."
+        render :show
+      end
+    end
+
+  end
