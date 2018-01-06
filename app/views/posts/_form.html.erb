@@ -13,7 +13,7 @@
 
   <%= form_group_tag(post.errors[:name]) do %>
     <%= f.label :name %>
-    <%= f.text_field :name, class: 'form-control', placeholder: "Enter post name" %>
+    <%= f.text_field :name, autofocus: true, class: 'form-control', placeholder: "Enter post name" %>
   <% end %>
 
   <%= form_group_tag(post.errors[:description]) do %>

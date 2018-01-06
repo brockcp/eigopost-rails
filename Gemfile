@@ -55,6 +55,7 @@ group :development do
 end
 
 gem 'bootstrap-sass'
+gem 'jquery-rails'
 gem 'devise'
 gem 'figaro', '1.0'
 gem 'sendgrid-ruby'

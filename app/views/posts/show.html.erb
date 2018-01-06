@@ -1,23 +1,27 @@
-<h1>Posts#Showsy</h1>
-<h2 class="media_header">
-  <%= @post.name %>
-</h2>
-<p>
-<%= @post.description %>
-</p>
+<div class="row">
+  <div class="col-md-8">
+    <h3><%= @post.name %></h3>
+      <p class="lead">
+        <%= @post.description %>
+        <br>
+        <small>posted by</small>
+      <small class="red"><%= @post.user.username %></small>
+      </p>
 
-<% @post.comments.each do |p| %>
-  <h4 class="b"><%= p.body %></h4>
-  <small>
-   submitted <%= time_ago_in_words(p.created_at) %> ago
-   <br>
-   by <%= p.user.username %>
- </small>
- <br>
-<% end %>
+      <h4 class="red">comments</h4>
+      <% @post.comments.each do |p| %>
+        <p class="lead"><%= p.body %>
+        <small class="red font-fourteen">
+          <br>
+          submitted <%= time_ago_in_words(p.created_at) %> ago
+          by <%= p.user.username %>
+        </small>
+      <% end %>
+    </p>
 
-<%= link_to "New COMMENT", new_post_comment_path(@post), class: 'btn btn-success' %>
-<br><br>
-<li class="pp"><%= link_to "Back to Topics", posts_path, class: "pp" %></li>
+    <%= link_to "comment", new_post_comment_path(@post), class: 'btn btn-success' %>
+    <br><br>
+    <li class="nodec"><%= link_to "Back to all Posts", posts_path, class: "pp" %></li>
 
-<%# link_to "Delete Topic", @post, method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure you want to Delete?' } %>
+  </div>
+</div>

@@ -15,7 +15,7 @@
         <li><%= link_to "EigoPost", root_path %> </li>
         <li><%= link_to "about", about_path %></li>
         <li><%= link_to "Posts", posts_path %></li>
-        <li class="pull-right blue">
+        <li class="pull-right current-user">
         <% if user_signed_in? %>
            <span class=""><%= current_user.email %></span>
            <li class="pull-right"><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %></li>
@@ -29,7 +29,7 @@
        </ul>
 
       <% if flash[:notice] %>
- <div class="alert alert-success">
+ <div class="alert alert-dismissible alert-success">
    <button type="button" class="close" data-dismiss="alert">&times;</button>
    <%= flash[:notice] %>
  </div>

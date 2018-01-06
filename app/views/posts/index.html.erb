@@ -1,24 +1,20 @@
 <h1><small>All</small> EigoPosts</h1>
-
 <div class="row">
   <div class="col-md-8">
     <% @posts.each do |t| %>
-      <div class="media">
-        <div class="media-body">
-          <h4 class="media-heading">
-            <%= link_to t.name, t %>
-          </h4>
-            <p class="lead">
-              <%= truncate(t.description, :length => 70) %>
-            </p>
-            <small>
-              submitted <%= time_ago_in_words(t.created_at) %>
-              ago by <%= t.user.username %>
-            </small>
-        </div>
-      </div>
+      <h3><%= link_to t.name, t %></h3>
+      <p class="lead bborder">
+        <%= link_to truncate(t.description, :length => 70), t %>
+        <br>
+        <small class="red font-fourteen">
+          submitted <%= time_ago_in_words(t.created_at) %>
+          ago by <%= t.user.username %>
+          <br><%= link_to t.comments.size, t %> comments
+        </small>
+      </p>
     <% end %>
   </div>
+</div>
 
 <br>
 <%= link_to "New Post", new_post_path,

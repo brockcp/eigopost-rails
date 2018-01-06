@@ -1,14 +1,13 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-html{}
-h1{}
-.blue{margin-top: 11px;color:purple}
-h4, h4.b a{margin:3px 0 0 0; padding:0;}
-small{margin-bottom:13px}
-p.c {font-size:16px;color:#555555;}
-p.lead{margin:0}
-.pp{list-style-type: none;}
-a {color:#c66}
-a:hover{color:#ba5353; text-decoration: none}
-.btn-success{background-color: #c66}
+a {color:#666666}
+a:hover{color:#777777; text-decoration: none}
+.nav-tabs > li > a{color:#ba5353}
+.nav-tabs > li > a:hover{color:#c66}
+.current-user{color:#c66; margin-top:11px}
+.btn-success{background-color: #c66; border-color:#c66}
+.btn-success:hover{background-color:#ba5353; border-color:#c66}
+.nodec{list-style-type: none}
+.red{color:#c66}
+.font-fourteen{font-size:14px}
