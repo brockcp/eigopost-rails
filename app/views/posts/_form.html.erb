@@ -11,15 +11,19 @@
     </div>
   <% end %>
 
+  <div class="form-group">
   <%= form_group_tag(post.errors[:name]) do %>
     <%= f.label :name %>
     <%= f.text_field :name, autofocus: true, class: 'form-control', placeholder: "Enter post name" %>
   <% end %>
+  </div>
 
+  <div class="form-group" %>
   <%= form_group_tag(post.errors[:description]) do %>
     <%= f.label :description %>
     <%= f.text_area :description, rows: 8, class: 'form-control', placeholder: "Enter post description" %>
   <% end %>
+  </div>
 
   <div class="form-group" %>
     <%= f.label :public, class: 'checkbox' do %>

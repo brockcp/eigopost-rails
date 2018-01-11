@@ -1,7 +1,0 @@
-
-<br>
-<p class="c"><%= @comment.body %></p>
-<br>
-<%= link_to "Back to All Posts", post_path(@comment.post, @comment), class: "btn btn-primary" %>
-<%= link_to "edit", edit_post_comment_path(@comment.post, @comment), class: "btn btn-success" %>
-<%= link_to "delete", [@comment.post, @comment], method: :delete, class: 'btn btn-danger', data: { confirm: "Sure?" } %>

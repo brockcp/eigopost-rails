@@ -1,21 +1,20 @@
 <h1><small>All</small> EigoPosts</h1>
 <div class="row">
   <div class="col-md-8">
-    <% @posts.each do |t| %>
-      <h3><%= link_to t.name, t %></h3>
+    <% @posts.each do |loopy| %>
+      <h3><%= link_to loopy.name, loopy %></h3>
       <p class="lead bborder">
-        <%= link_to truncate(t.description, :length => 70), t %>
+        <%= link_to truncate(loopy.description, :length => 90), loopy %>
         <br>
         <small class="red font-fourteen">
-          submitted <%= time_ago_in_words(t.created_at) %>
-          ago by <%= t.user.username %>
-          <br><%= link_to t.comments.size, t %> comments
+          submitted <%= time_ago_in_words(loopy.created_at) %>
+          ago by <%= loopy.user.username %>
+          <br><%= link_to loopy.comments.size, loopy %> comments
         </small>
       </p>
     <% end %>
   </div>
 </div>
 
-<%= link_to "New Post", new_post_path,
-    class: "btn btn-success" %>
+<%= link_to "New Post", new_post_path, class: "btn btn-success" %>
 </div>
