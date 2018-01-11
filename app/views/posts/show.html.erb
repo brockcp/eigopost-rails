@@ -1,11 +1,8 @@
 <div class="row">
   <div class="col-md-8">
-    <h3><%= @post.name %></h3>
+    <h3><%= @post.name %><small class="red"> posted by <%= @post.user.username %></small></h3>
       <p class="lead">
         <%= @post.description %>
-        <br>
-        <small>posted by</small>
-      <small class="red"><%= @post.user.username %></small>
       </p>
 
       <h4 class="red">comments</h4>
@@ -13,15 +10,18 @@
         <p class="lead"><%= p.body %>
         <small class="red font-fourteen">
           <br>
-          submitted <%= time_ago_in_words(p.created_at) %> ago
+          posted <%= time_ago_in_words(p.created_at) %> ago
           by <%= p.user.username %>
         </small>
+        </p>
       <% end %>
-    </p>
 
-    <%= link_to "comment", new_post_comment_path(@post), class: 'btn btn-success' %>
+    <span>Feel free to comment below or, </span>
+    <a class="nodec"><%= link_to "Back to all Posts", posts_path, class: "pp" %></a>
+
     <br><br>
-    <li class="nodec"><%= link_to "Back to all Posts", posts_path, class: "pp" %></li>
+
+    <%= render 'comments/form', comment: Comment.new, post: @post %>
 
   </div>
 </div>

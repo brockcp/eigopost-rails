@@ -14,7 +14,7 @@
 
     <%= form_group_tag(comment.errors[:body]) do %>
         <%#= f.label :body %>
-        <%= f.text_area :body, rows: 8, autofocus: true,
+        <%= f.text_area :body, rows: 8, #autofocus: true,
             class: 'form-control', placeholder: "your comment" %>
     <% end %>
 
