@@ -1,0 +1,5 @@
+<div class="vote-arrows pull-left">
+  <div><%= link_to "", comment_up_vote_path(comment), class: 'glyphicon glyphicon-chevron-up', method: :post %></div>
+  <div><strong><%#= post.comment.points %></strong></div>
+  <div><%= link_to "", comment_down_vote_path(comment), class: 'glyphicon glyphicon-chevron-down', method: :post %></div>
+</div>

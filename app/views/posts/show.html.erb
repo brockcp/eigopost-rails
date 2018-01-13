@@ -1,17 +1,19 @@
 <div class="row">
   <div class="col-md-8">
+
     <h3><%= @post.name %><small class="red"> posted by <%= @post.user.username %></small></h3>
       <p class="lead">
         <%= @post.description %>
       </p>
 
       <h4 class="red">comments</h4>
-      <% @post.comments.each do |p| %>
-        <p class="lead"><%= p.body %>
+      <% @post.comments.each do |comment| %>
+          <%= render partial: 'votes/voting', locals: { comment: comment } %>
+        <p class="lead"><%= comment.body %>
         <small class="red font-fourteen">
           <br>
-          posted <%= time_ago_in_words(p.created_at) %> ago
-          by <%= p.user.username %>
+          posted <%= time_ago_in_words(comment.created_at) %> ago
+          by <%= comment.user.username %>
         </small>
         </p>
       <% end %>
@@ -25,3 +27,20 @@
 
   </div>
 </div>
+
+<div class="col-md-4">
+  <h3>
+    <%#= pluralize(@post.points, 'point') %>
+    <div>
+      <small>
+        <%#= pluralize(@post.up_votes, 'up vote') %>...
+        <%#= pluralize(@post.down_votes, 'down vote') %>
+      </small>
+    </div>
+  </h3>
+</div>
+
+
+
+  <%#= render partial: 'comments/points', locals: { comment: @comment} %>
+  <%#= render @post.comments %>
