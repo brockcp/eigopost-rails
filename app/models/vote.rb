@@ -5,8 +5,10 @@ class Vote < ApplicationRecord
 
   validates :value, inclusion: { in: [-1,1], message: "%{value} is not a valid vote." }, presence: true
 
-  def update_comment
-    comment.update_rank
-  end
+  private
+
+    def update_comment
+      comment.update_rank
+    end
 
 end

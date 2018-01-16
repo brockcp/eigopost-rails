@@ -5,8 +5,8 @@ class Post < ApplicationRecord
 
   default_scope { order(created_at: :asc) } #desc
 
-  validates :name, length: { minimum: 5 }, presence: true
-  validates :description, length: { minimum: 15 }, presence: true
+  validates :post_title, length: { minimum: 5 }, presence: true
+  validates :post_body, length: { minimum: 15 }, presence: true
   validates :user, presence: true
 
 end

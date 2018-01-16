@@ -1,20 +1,21 @@
 <h1><small>All</small> EigoPosts</h1>
 <div class="row">
   <div class="col-md-8">
-    <% @posts.each do |post_a| %>
-      <h3><%= link_to post_a.name, post_a %></h3>
-      <p class="lead bborder">
-        <%= link_to truncate(post_a.description, :length => 90), post_a %>
+    <% @posts.each do |post_l| %>
+      <h3><%= link_to post_l.post_title, post_l %></h3>
+      <p class="lead">
+        <%= link_to truncate(post_l.post_body, :length => 90), post_l %>
         <br>
         <small class="red font-fourteen">
-          submitted <%= time_ago_in_words(post_a.created_at) %>
-          ago by <%= post_a.user.username %>
-          <br><%= link_to post_a.comments.size, post_a %> comments
+          submitted <%= time_ago_in_words(post_l.created_at) %>
+          ago by <span class="grey"><%= post_l.user.username %></span>
+          <br><%= link_to post_l.comments.size, post_l %> comments
         </small>
       </p>
     <% end %>
   </div>
-</div>
 
-<%= link_to "New Post", new_post_path, class: "btn btn-success" %>
+  <div class="col-md-4">
+    <%= link_to "New Post", new_post_path, class: "btn btn-success" %>
+  </div>
 </div>

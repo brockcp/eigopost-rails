@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 20180112003749) do
 
   create_table "comments", force: :cascade do |t|
-    t.text "body"
+    t.text "comment_body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
@@ -24,8 +24,8 @@ ActiveRecord::Schema.define(version: 20180112003749) do
   end
 
   create_table "posts", force: :cascade do |t|
-    t.string "name"
-    t.text "description"
+    t.string "post_title"
+    t.text "post_body"
     t.boolean "public", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

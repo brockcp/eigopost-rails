@@ -1,29 +1,33 @@
 <div class="row">
   <div class="col-md-8">
+    <h3><%= @post.post_title %><small class="red"> posted by
+    <span class="grey"><%= @post.user.username %></small></span>
+    </h3>
+    <p class="lead"><%= @post.post_body %>
+    </p>
 
-    <h3><%= @post.name %><small class="red"> posted by <%= @post.user.username %></small></h3>
-      <p class="lead">
-        <%= @post.description %>
-      </p>
+    <a class="no-decoration"><%= link_to "Back to all Posts", posts_path, class: "pp" %></a>
 
-      <h4 class="red">comments</h4>
-      <% @post.comments.each do |comment| %>
-          <%= render partial: 'votes/voting', locals: { comment: comment } %>
-        <p class="lead"><%= comment.body %>
-        <small class="red font-fourteen">
-          <br>
-          posted <%= time_ago_in_words(comment.created_at) %> ago
-          by <%= comment.user.username %>
-        </small>
+    <h4 class="red">comments</h4>
+      <% @post.comments.each do |comments_l| %>
+
+        <%= render partial: 'votes/voting', locals: { comments_l: comments_l } %>
+
+        <p class="lead"><%= simple_format(comments_l.comment_body) %> <!--simple_format renders new lines/returns-->
+          <small class="red font-fourteen">
+            <br>
+            posted <%= time_ago_in_words(comments_l.created_at) %> ago
+            by <span class="grey"><%= comments_l.user.username %></span>
+          </small>
         </p>
+
       <% end %>
 
-    <span>Feel free to comment below or, </span>
-    <a class="nodec"><%= link_to "Back to all Posts", posts_path, class: "pp" %></a>
+      <span>Feel free to comment below or, </span>
+      <a class="nodec"><%= link_to "Back to all Posts", posts_path, class: "pp" %></a>
+      <br><br>
 
-    <br><br>
-
-    <%= render 'comments/form', comment: Comment.new, post: @post %>
+      <%= render 'comments/form', comment: Comment.new, post: @post %>
 
   </div>
 </div>

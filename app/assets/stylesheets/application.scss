@@ -1,20 +1,35 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+//GLOBAL
 a {color:#666666}
 a:hover{color:#777777; text-decoration: none}
-.nav-tabs > li > a{color:#ba5353}
-.nav-tabs > li > a:hover{color:#c66}
-.current-user{color:#c66; margin-top:11px}
-.btn-success{background-color: #c66; border-color:#c66}
-.btn-success:hover{background-color:#ba5353; border-color:#c66}
-.nodec{list-style-type: none}
-.red{color:#c66}
-.grey{color:#777777}
+.red{color: #c66}
+.grey{color: #777777}
+.margin-t-14{margin-top:14px}
 .font-fourteen{font-size:14px}
-textarea#comment_body.form-control {background-color:#fceded}
-input#post_public{margin-left:95px;}
-.alert-success{background-color:#fceded}
+.no-decoration{list-style-type: none}
 .vote-arrows{width:40px; text-align: center;}
 .bborder{border:1px solid red}
 .margin-t{margin: 5px 0 0 45px}
+//NAV
+.nav-tabs > li > a{color:#d22d2d;}
+.nav-tabs > li > a:hover{color:#b94646}
+.current-user{color:orange; margin-top:11px}
+//FORM
+.btn-success{background-color: #266ed9; border-color: #266ed9}
+.btn-success:hover{background-color: #5377ac; border-color:#5377ac}
+.alert-success{color: #dddddd ; background-color: #266ed9; border: 1px solid #fceded}
+textarea#comment_body.form-control {background-color: #fceded}
+input#post_public{margin-left:95px;}
+select:hover { outline:none; }
+.form-control{outline:none}
+textarea, input, button { outline: none; }
+.form-control:focus {
+  border-color: #e9658f;
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+//-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+//box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+}
