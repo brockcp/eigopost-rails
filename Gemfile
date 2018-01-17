@@ -7,6 +7,7 @@ gem 'rails', '~> 5.1.4'
 group :production do
   gem 'pg', '~> 0.20'
   gem 'rails_12factor'
+  gem 'puma', '~> 3.7'
 end
 
 group :development do
@@ -64,4 +65,3 @@ gem 'figaro', '1.0'
 gem 'sendgrid-ruby'
 gem 'bcrypt'
 gem 'pundit'
-gem 'thin'
