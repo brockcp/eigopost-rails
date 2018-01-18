@@ -86,7 +86,8 @@ Rails.application.configure do
     config.logger    = ActiveSupport::TaggedLogging.new(logger)
   end
 
-  config.secret_key_base = ENV["DEVISE_SECRET_KEY"]
+  #changed secret key
+  config.secret_key_base = ENV["SECRET_KEY_BASE"]
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
