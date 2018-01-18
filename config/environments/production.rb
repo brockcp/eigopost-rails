@@ -103,7 +103,7 @@ Rails.application.configure do
     authentication: :plain,
     user_name:      ENV['SENDGRID_USERNAME'],
     password:       ENV['SENDGRID_PASSWORD'],
-    domain:         'eigopost.herokuapp.com',
+    domain:         'heroku.com',
     enable_starttls_auto: true
   }
 
