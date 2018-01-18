@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20180112003749) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "comments", force: :cascade do |t|
     t.text "comment_body"
     t.datetime "created_at", null: false
@@ -60,12 +63,14 @@ ActiveRecord::Schema.define(version: 20180112003749) do
 
   create_table "votes", force: :cascade do |t|
     t.integer "value"
-    t.integer "user_id"
-    t.integer "comment_id"
+    t.bigint "user_id"
+    t.bigint "comment_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["comment_id"], name: "index_votes_on_comment_id"
     t.index ["user_id"], name: "index_votes_on_user_id"
   end
 
+  add_foreign_key "votes", "comments"
+  add_foreign_key "votes", "users"
 end
