@@ -1,7 +1,10 @@
-# README
+# **EigoPost**
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## A Site for Japanese to Study and Practice English
+
+### EigoPost is built upon Ruby On Rails
+
+#### Core technologies used are Devise,
 
 Things you may want to cover:
 

@@ -10,10 +10,10 @@ class CommentsController < ApplicationController
     comment = @post.comments.new(comment_params)
     comment.user = current_user
     if comment.save
-      flash[:notice] = "Saved!"
+      flash[:notice] = "Thank you. Your comment has been received!"
       redirect_to @post
     else
-      flash[:notice] = "Not Saved"
+      flash[:notice] = "Oops, that didn't work. Did you write anything?"
       redirect_to @post
     end
   end

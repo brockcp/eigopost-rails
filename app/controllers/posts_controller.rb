@@ -19,10 +19,10 @@ class PostsController < ApplicationController
     @post.public = params[:post][:public]
     @post.user = current_user
     if @post.save
-      flash[:notice] = "Thank you. Your post has been posted."
+      flash[:notice] = "Thank you. Your post has been received."
       redirect_to @post
     else
-      flash.now[:alert] = "Oops, that didnt work. Please try again."
+      flash.now[:alert] = "Oops, that didnt work. Please check message below."
       render :new
     end
   end

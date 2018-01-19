@@ -65,6 +65,4 @@ Rails.application.configure do
     domain:         'localhost:3000',
     enable_starttls_auto: true
   }
-
-
 end
