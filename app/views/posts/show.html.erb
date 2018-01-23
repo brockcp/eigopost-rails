@@ -1,33 +1,32 @@
-<div class="row">
-  <div class="col-md-8">
-    <h3><%= @post.post_title %><small class="red"> posted by
-    <span class="grey"><%= @post.user.username %></small></span>
+<div class="container">
+  <div class="row">
+   <div class="col-md-8">
+    <!--POST-->
+    <h3 class="color-grey"><%= @post.post_title %>
+      <small class="color-light-grey"> posted by
+        <span class="color-red"><%= @post.user.username %></span>
+      </small>
     </h3>
     <p class="lead"><%= @post.post_body %>
     </p>
-
-    <a class="no-decoration"><%= link_to "Back to all Posts", posts_path, class: "pp" %></a>
-
-    <h4 class="red">comments</h4>
+    <!--COMMENTS-->
+    <h4 class="color-grey">comments</h4>
       <% @post.comments.each do |comments_l| %>
-
         <%= render partial: 'votes/voting', locals: { comments_l: comments_l } %>
-
-        <p class="lead"><%= simple_format(comments_l.comment_body) %> <!--simple_format renders new lines/returns-->
-          <small class="red font-fourteen">
+        <p class="lead"><%= simple_format(comments_l.comment_body, :class => "color-grey") %> <!--simple_format renders new lines/returns-->
+          <small class="font-14 color-grey">
             <br>
-            posted <%= time_ago_in_words(comments_l.created_at) %> ago
-            by <span class="grey"><%= comments_l.user.username %></span>
+            posted <%= time_ago_in_words(comments_l.created_at) %> ago by
+            <span class="color-red"><%= comments_l.user.username %></span>
           </small>
         </p>
-
+        <hr>
       <% end %>
-
-      <span>Feel free to comment below or, </span>
-      <a class="nodec"><%= link_to "Back to all Posts", posts_path, class: "pp" %></a>
       <br><br>
-
+      <p><span class="color-grey">Comment below, or </span>
+        <%= link_to "return to the Posts main page", posts_path, :class => "color-red" %>
+      </p>
       <%= render 'comments/form', comment: Comment.new, post: @post %>
-
-  </div>
+   </div><!--col-md-8-->
+  </div><!--row-->
 </div>
