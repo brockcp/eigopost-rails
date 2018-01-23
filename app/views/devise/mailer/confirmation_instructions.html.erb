@@ -1,5 +1,6 @@
-<p>Welcome <%= @email %>!</p>
+<p>Hello <%= @user.username %>!</p>
 
-<p>You can confirm your account email through the link below:</p>
+<p>Thanks so much for joining EigoPost! We are glad to have you.</p>
+<p>You can confirm your account and log in through the link below:</p>
 
 <p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
