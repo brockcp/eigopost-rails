@@ -39,7 +39,8 @@ li.nav-devise-user{margin:0 0 0 15px} //@768px devise username on nav
 }
 //LOGIN
 input#user_email, input#user_password,
-input#user_username, input#user_password_confirmation{
+input#user_username, input#user_password_confirmation,
+input#user_current_password{
   background-color:#fff7f7;
   border:none;
   border:1px solid #777777;
@@ -48,7 +49,8 @@ input#user_username, input#user_password_confirmation{
   -webkit-box-shadow: 0 0 0px 1000px #fff inset; //for chromeputridyellow
 }
 input#user_email:focus, input#user_password:focus,
-input#user_username:focus, input#user_password_confirmation:focus{
+input#user_username:focus, input#user_password_confirmation:focus,
+input#user_current_password:focus{
   border-color: $primary-red;
   outline: 0; //for safariblueglowofdespair
 }
