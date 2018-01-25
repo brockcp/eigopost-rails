@@ -4,17 +4,26 @@
 
 //COLORS
 h1.color-red, h3.color-red a, h4.color-red a, a.color-red, .color-red{color: $primary-red}
-p.color-grey, p.color-grey a, .color-grey{color: $primary-grey}
+p.color-grey, p.color-grey a, .color-grey a, .color-grey{color: $primary-grey}
+.color-blue{color:blue}
 a.color-red:hover{color: $secondary-red}
 small.color-light-grey{color: $secondary-grey}
 span.color-grey-devise a{color:$primary-grey}
 
-//FONTS & EXTRAS
+//TEXT, FONTS & EXTRAS
+.border-warning {
+  border-color: #ffc107 !important;
+}
+//h1, h4, p, .lead{margin:0}
+.margin-zero{margin:0}
+.align-right{text-align: right}
+hr{margin: 5px 0}
 .font-14{font-size: 14px}
 .vote-arrows{width:40px; text-align: center}
 a.glyphicon{color: $primary-red}
 div.alert.alert-dismissible.alert-success{background-color: $secondary-blue; border-color: $primary-blue; color:$primary-blue; border-radius:0}
 div.alert.alert-warning{background-color: #ffadad; border-color: #ffadad; color:$primary-white; border-radius:0}
+.border-red{ border: 1px solid $primary-red}
 
 //LANDING
 .container-fluid{padding:0}
@@ -29,7 +38,7 @@ div.alert.alert-warning{background-color: #ffadad; border-color: #ffadad; color:
 .navbar-default .navbar-nav > li > a{color: $primary-red}
 .navbar-default .navbar-nav > li > a:hover{color: $secondary-red}
 li.nav-devise-user{margin:0 0 0 15px} //@768px devise username on nav
-
+nav.navbar.navbar-default{margin-bottom: 0px}//B->20
 //NAV MENU BUTTON
 .navbar-default .navbar-toggle:hover{background-color: $primary-white};
 .navbar-default .navbar-toggle .icon-bar{background-color:$primary-red}
@@ -43,7 +52,6 @@ li.nav-devise-user{margin:0 0 0 15px} //@768px devise username on nav
   -webkit-box-shadow: none; //-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
   box-shadow: none; //box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
 }
-
 //LOGIN
 input#user_email, input#user_password,
 input#user_username, input#user_password_confirmation,
@@ -68,7 +76,7 @@ div#error_explanation h2{font-size:16px; color:$primary-grey}
 div#error_explanation ul li{color:$secondary-grey; list-style-type: disc;}
 
 //MAIN BUTTON
-.btn{border-radius:4px; width:200px; }
+.btn{border-radius:4px; width:150px; }
 .btn-success {
   color:  $primary-white;
   background-color: $primary-red;
@@ -96,7 +104,6 @@ fieldset[disabled] .btn-success.focus{
   background-color: $secondary-red;
   border-color: $primary-white;
 }
-
 
 //MEDIA QUERIES
 @media (min-width: 768px) {
