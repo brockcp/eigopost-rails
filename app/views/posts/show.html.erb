@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-8">
-      <div class="row">
+      <div class="row"><!--posts-->
         <div class="col-xs-12">
           <h3 class="color-grey"><%= @post.post_title %>
             <small class="color-light-grey"> posted by</small>
@@ -17,7 +17,7 @@
           <hr>
         </div>
         <% @post.comments.each do |comments_l| %>
-          <div class="col-xs-1 vote-arrows">
+          <div class="col-xs-1">
             <%= render partial: 'votes/voting', locals: { comments_l: comments_l } %>
           </div>
           <div class="col-xs-11">
@@ -29,8 +29,8 @@
           </div>
         <% end %>
       </div>
-      <div class="row">
-        <div class="col-xs-12">
+      <div class="row"><!--form-->
+        <div class="col-sm-10">
           <span class="color-grey">Comment below, or </span>
           <%= link_to "return to all Posts", posts_path, :class => "color-red" %>
           <%= render 'comments/form', comment: Comment.new, post: @post %>

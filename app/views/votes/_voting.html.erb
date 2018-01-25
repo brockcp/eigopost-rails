@@ -1,3 +1,5 @@
-<div><%= link_to "", comment_up_vote_path(comments_l), class: 'glyphicon glyphicon-chevron-up', method: :post %></div>
+<div class="vote-arrows">
+<div><%= link_to "", comment_up_vote_path(comments_l), class: 'glyphicon glyphicon-thumbs-up', method: :post %></div>
 <div><strong><%= comments_l.points %></strong></div>
-<div><%= link_to "", comment_down_vote_path(comments_l), class: 'glyphicon glyphicon-chevron-down', method: :post %></div>
+<div><%= link_to "", comment_down_vote_path(comments_l), class: 'glyphicon glyphicon-thumbs-down', method: :post %></div>
+</div>
