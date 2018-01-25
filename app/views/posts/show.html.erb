@@ -1,33 +1,44 @@
 <div class="container">
   <div class="row">
-   <div class="col-xs-12 col-sm-8">
-    <!--POST-->
-    <h3 class="color-grey"><%= @post.post_title %>
-      <small class="color-light-grey"> posted by</small>
-      <small class="color-red"><%= @post.user.username %></small></h3>
-    <p class="lead"><%= @post.post_body %></p>
-    <hr>
-    <!--COMMENTS-->
-    <h4 class="color-grey">comments</h4>
-    <hr>
-    <% @post.comments.each do |comments_l| %>
+    <div class="col-md-8">
       <div class="row">
-          <%= render partial: 'votes/voting', locals: { comments_l: comments_l } %>
+        <div class="col-xs-12">
+          <h3 class="color-grey"><%= @post.post_title %>
+            <small class="color-light-grey"> posted by</small>
+            <small class="color-red"><%= @post.user.username %></small>
+          </h3>
+          <p class="lead"><%= @post.post_body %></p>
+          <hr>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12"><!--cant put this in lead of comments loop col-->
+          <h4 class="color-grey">comments</h4>
+          <hr>
+        </div>
+        <% @post.comments.each do |comments_l| %>
+          <div class="col-xs-1 vote-arrows">
+            <%= render partial: 'votes/voting', locals: { comments_l: comments_l } %>
+          </div>
           <div class="col-xs-11">
             <p class="lead"><%= simple_format(comments_l.comment_body, :class => "color-grey") %>
-            <div class="align-right">
               <small class="color-grey">posted <%= time_ago_in_words(comments_l.created_at) %> ago by </small>
               <small class="color-red"><%= comments_l.user.username %></small>
-            </div>
             </p>
-          </div><!--col-->
-        </div><!--row-->
-      <hr>
-    <% end %>
-    <br>
-    <span class="color-grey">Comment below, or </span>
-    <%= link_to "return to the Posts main page", posts_path, :class => "color-red" %>
-    <%= render 'comments/form', comment: Comment.new, post: @post %>
-   </div><!--col-md-8-->
-  </div><!--row-->
+            <hr>
+          </div>
+        <% end %>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <span class="color-grey">Comment below, or </span>
+          <%= link_to "return to all Posts", posts_path, :class => "color-red" %>
+          <%= render 'comments/form', comment: Comment.new, post: @post %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 border-grey height-filler">
+      filler
+    </div>
+  </div>
 </div>

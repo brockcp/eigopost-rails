@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-5">
-      <h2 class="color-grey">New Post</h2>
+    <div class="col-sm-7">
+      <h3 class="color-grey">New Post</h3>
       <%= form_for post do |f| %>
         <% if post.errors.any? %>
           <div class="alert alert-danger">
@@ -29,6 +29,9 @@
           <%= f.submit "Save", class: 'btn btn-success' %>
         </div>
       <% end %>
+    </div>
+    <div class="col-sm-5 border-grey height-filler">
+      filler
     </div>
   </div>
 </div>

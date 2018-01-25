@@ -15,15 +15,20 @@ span.color-grey-devise a{color:$primary-grey}
   border-color: #ffc107 !important;
 }
 //h1, h4, p, .lead{margin:0}
-.margin-zero{margin:0}
-.align-right{text-align: right}
-hr{margin: 5px 0}
+.margin-0{margin:0}
+.margin-5{margin:5px}
+.margin-10{margin:10px}
+//.align-right{right:0}
+//p.lead{ position:relative}
+hr{margin: 10px 0}
+.font-16{font-size:16px}
 .font-14{font-size: 14px}
 .vote-arrows{width:40px; text-align: center}
 a.glyphicon{color: $primary-red}
 div.alert.alert-dismissible.alert-success{background-color: $secondary-blue; border-color: $primary-blue; color:$primary-blue; border-radius:0}
 div.alert.alert-warning{background-color: #ffadad; border-color: #ffadad; color:$primary-white; border-radius:0}
-.border-red{ border: 1px solid $primary-red}
+.border-grey{border: 1px solid #eeeeee}
+.height-filler{height:500px}
 
 //LANDING
 .container-fluid{padding:0}

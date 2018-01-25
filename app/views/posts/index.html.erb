@@ -1,17 +1,19 @@
-<div class="row">
-  <div class="col-sm-8">
-    <h1 class="color-grey margin-zero"><small class="">recent </small>EigoPosts</h1>
-    <hr>
-    <% @posts.each do |post_l| %>
-      <h4 class="color-red margin-zero"><%= link_to post_l.post_title, post_l %></h4>
-      <p class="lead color-grey margin-zero"><%= link_to truncate(post_l.post_body, :length => 90), post_l %></p>
-      <small class="color-grey">submitted <%= time_ago_in_words(post_l.created_at) %> ago by </small>
-      <small class="color-red"><%= post_l.user.username %></small>
-      <small class="color-grey pull-right"><%= link_to post_l.comments.size, post_l %> comments</small>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8">
+      <h1 class="color-grey margin-10"><small class="font-16">new</small>EigoPosts</h1>
       <hr>
-    <% end %>
-  </div>
-  <div class="col-sm-4">
-    <%= link_to "New Post", new_post_path, class: "btn btn-success" %>
+      <% @posts.each do |post_l| %>
+        <h4 class="color-red margin-5"><%= link_to post_l.post_title, post_l %></h4>
+        <p class="lead color-grey margin-5"><%= link_to truncate(post_l.post_body, :length => 90), post_l %></p>
+        <small class="color-grey">submitted <%= time_ago_in_words(post_l.created_at) %> ago by </small>
+        <small class="color-red"><%= post_l.user.username %></small>
+        <small class="color-grey pull-right"><%= link_to post_l.comments.size, post_l %> comments</small>
+        <hr>
+      <% end %>
+    </div>
+    <div class="col-sm-4 border-grey height-filler">
+      <%= link_to "New Post", new_post_path, class: "btn btn-success margin-10" %>
+    </div>
   </div>
 </div>
