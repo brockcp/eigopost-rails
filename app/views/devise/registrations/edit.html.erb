@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-12">
+    <div class="col-md-8">
       <h3 class="color-grey">Change your settings<%#= resource_name.to_s.humanize %></h3>
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
         <%= devise_error_messages! %>
@@ -43,6 +43,9 @@
       <h3 class="color-grey">Cancel my account</h3>
       <p class="color-grey">We will miss you... <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-success" %></p>
       <%= link_to "Back", :back, class: "color-red font-14"%>
+    </div>
+    <div class="col-md-4 border-grey height-filler">
+      SIDEBAR
     </div>
   </div>
 </div>

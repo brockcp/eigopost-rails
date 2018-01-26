@@ -1,11 +1,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome";
 @import "color-variables";
 
 //COLORS
 h1.color-red, h3.color-red a, h4.color-red a, a.color-red, .color-red{color: $primary-red}
 p.color-grey, p.color-grey a, .color-grey a, .color-grey{color: $primary-grey}
-.color-blue{color:blue}
+.color-blue{color:#1a75ff}
 a.color-red:hover{color: $secondary-red}
 small.color-light-grey{color: $secondary-grey}
 span.color-grey-devise a{color:$primary-grey}
@@ -24,7 +25,8 @@ hr{margin: 10px 0}
 //.font-16{font-size:16px}
 //.font-14{font-size: 14px}
 .vote-arrows{width:20px; text-align: center;}
-a.glyphicon{color: $primary-red; text-align: center}
+a.glyphicon{color: $primary-blue; text-align: center}
+
 //.comments-lead{max-width: 200px;}
 div.alert.alert-dismissible.alert-success{background-color: $secondary-blue; border-color: $secondary-blue; color:#000000; border-radius:0}
 div.alert.alert-warning{background-color: #ffadad; border-color: #ffadad; color:$primary-white; border-radius:0}
@@ -86,7 +88,7 @@ div#error_explanation ul li{color:$secondary-grey; list-style-type: disc;}
 .btn{border-radius:4px; width:150px; }
 .btn-success {
   color:  $primary-white;
-  background-color: $primary-red;
+  background-color: $primary-blue;
   border-color: $primary-white;
 }
 .btn-success:focus,
@@ -108,7 +110,7 @@ fieldset[disabled] .btn-success:focus,
 .btn-success[disabled].focus,
 fieldset[disabled] .btn-success.focus{
   color:  $primary-white;
-  background-color: $secondary-red;
+  background-color: $secondary-blue;
   border-color: $primary-white;
 }
 
