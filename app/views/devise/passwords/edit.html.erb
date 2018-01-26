@@ -1,12 +1,12 @@
 <div class="container">
  <div class="row">
   <div class="col-md-8">
-    <h3 class="color-grey">Change your password</h3>
+    <h3 class="color-2">Change your password</h3>
     <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
       <%= devise_error_messages! %>
       <%= f.hidden_field :reset_password_token %>
       <div class="field">
-        <%= f.label :password, "New password", class: "color-grey" %><br />
+        <%= f.label :password, "New password", class: "color-2" %><br />
         <% if @minimum_password_length %>
         <em>(<%= @minimum_password_length %> characters minimum)</em><br />
         <% end %>

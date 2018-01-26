@@ -3,17 +3,17 @@
     <div class="col-md-8">
       <div class="row"><!--posts-->
         <div class="col-xs-12">
-          <h3 class="color-grey"><%= @post.post_title %>
-            <small class="color-light-grey"> posted by</small>
-            <small class="color-red"><%= @post.user.username %></small>
+          <h3 class="color-1a"><%= @post.post_title %>
+            <small class="color-2a"> posted by</small>
+            <small class="color-1a"><%= @post.user.username %></small>
           </h3>
-          <p class="lead"><%= @post.post_body %></p>
+          <p class="lead color-2a"><%= @post.post_body %></p>
           <hr>
         </div>
       </div>
       <div class="row">
         <div class="col-xs-12"><!--cant put this in lead of comments loop col-->
-          <h4 class="color-grey">comments</h4>
+          <h4 class="color-2a">comments</h4>
           <hr>
         </div>
         <% @post.comments.each do |comments_l| %>
@@ -21,18 +21,18 @@
             <%= render partial: 'votes/voting', locals: { comments_l: comments_l } %>
           </div>
           <div class="col-xs-11">
-            <p class="lead"><%= simple_format(comments_l.comment_body, :class => "color-grey") %>
-              <small class="color-grey">posted <%= time_ago_in_words(comments_l.created_at) %> ago by </small>
-              <small class="color-red"><%= comments_l.user.username %></small>
+            <p class="lead"><%= simple_format(comments_l.comment_body, class: "color-2a") %>
+              <small class="color-2b">posted <%= time_ago_in_words(comments_l.created_at) %> ago by </small>
+              <small class="color-1a"><%= comments_l.user.username %></small>
             </p>
             <hr>
           </div>
         <% end %>
       </div>
       <div class="row"><!--form-->
-        <div class="col-sm-10">
-          <span class="color-grey">Comment below, or </span>
-          <%= link_to "return to all Posts", posts_path, :class => "color-red" %>
+        <div class="col-sm-12">
+          <span class="color-2a">Comment below, or </span>
+          <%= link_to "return to all Posts", posts_path, :class => "color-3a" %>
           <%= render 'comments/form', comment: Comment.new, post: @post %>
         </div>
       </div>

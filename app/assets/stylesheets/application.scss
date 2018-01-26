@@ -3,93 +3,88 @@
 @import "font-awesome";
 @import "color-variables";
 
-//COLORS
-h1.color-red, h3.color-red a, h4.color-red a, a.color-red, .color-red{color: $primary-red}
-p.color-grey, p.color-grey a, .color-grey a, .color-grey{color: $primary-grey}
-.color-blue{color:#1a75ff}
-a.color-red:hover{color: $secondary-red}
-small.color-light-grey{color: $secondary-grey}
-span.color-grey-devise a{color:$primary-grey}
+//COLOR SCHEME
+.color-1a, .color-1a a, h3.color-1a, h1.color-1a, h4.color-1a a, p.color-1a, p.color-1a a {
+  color: $base-1a}
+.color-1b, .color-1b a, h3.color-1b, h1.color-1b, h4.color-1b a, p.color-1b, p.color-1b a {
+  color: $base-1b}
+.color-2a, .color-2a a, h3.color-2a, h1.color-2a, h4.color-2a a, p.color-2a, p.color-2a a {
+  color: $base-2a}
+.color-2b, .color-2b a, h3.color-2b, h1.color-2b, h4.color-2b a, p.color-2b, p.color-2b a {
+  color: $base-2b}
+.color-3a {color: $base-3a}
+.color-3b {color: $base-3b}
+.color-4a {color: $base-4a}
+.color-4b {color: $base-4b}
 
-//TEXT, FONTS & EXTRAS
-.border-warning {
-  border-color: #ffc107 !important;
-}
-//h1, h4, p, .lead{margin:0}
+//MISCELLANEOUS
 .margin-0{margin:0}
 .margin-5{margin:5px}
 .margin-10{margin:10px}
-//.align-right{right:0}
-//p.lead{ position:relative}
+.margin-l-30{margin:0 0 0 30%}
+li.margin-b-15{margin:0 0 0 15px} //@768px nav username
 hr{margin: 10px 0}
-//.font-16{font-size:16px}
-//.font-14{font-size: 14px}
-.vote-arrows{width:20px; text-align: center;}
-a.glyphicon{color: $primary-blue; text-align: center}
-
-//.comments-lead{max-width: 200px;}
-div.alert.alert-dismissible.alert-success{background-color: $secondary-blue; border-color: $secondary-blue; color:#000000; border-radius:0}
-div.alert.alert-warning{background-color: #ffadad; border-color: #ffadad; color:$primary-white; border-radius:0}
-
+.container-fluid .jumbotron{border-radius:0}
 .border-grey{border: 1px solid #eeeeee}
 .height-filler{height:500px}
 
-//LANDING
-.container-fluid{padding:0}
-.container-fluid .jumbotron{border-radius:0}
-.list-style-type-none{list-style-type: none}
-.landing-link{color: $primary-blue; margin:0 0 0 20%;}
+//ICONS/ALERTS
+.vote-arrows{width:20px; text-align: center;}
+a.glyphicon{color: $base-3b; text-align: center}
+div.alert.alert-dismissible.alert-success{background-color: #ffffdd; border-color: #ffffdd; color: $base-2a; border-radius:0}
+div.alert.alert-warning{background-color: #ffeedd; border-color: #ffeedd; color: $base-2a; border-radius:0}
+//DEVISE ERRORS
+div#error_explanation{background-color: $base-4b; width: 250px}
+div#error_explanation h2{font-size:16px; color:$base-2a}
+div#error_explanation ul li{color:$base-2b; list-style-type: disc;}
 
 //NAV
-.navbar-default{background-color:  $primary-white}
-.navbar-default .navbar-brand{color: $primary-red}
-.navbar-default .navbar-brand:hover{color: $secondary-red}
-.navbar-default .navbar-nav > li > a{color: $primary-red}
-.navbar-default .navbar-nav > li > a:hover{color: $secondary-red}
-li.nav-devise-user{margin:0 0 0 15px} //@768px devise username on nav
-nav.navbar.navbar-default{margin-bottom: 0px}//B->20
-//NAV MENU BUTTON
-.navbar-default .navbar-toggle:hover{background-color: $primary-white};
-.navbar-default .navbar-toggle .icon-bar{background-color:$primary-red}
-.navbar-default .navbar-toggle{border-color:$primary-red}
-.navbar-default .navbar-toggle:hover{border-color:$secondary-red}
+.navbar-default{background-color:  $base-4a}
+.navbar-default .navbar-brand{color: $base-1a}
+.navbar-default .navbar-brand:hover{color: $base-1b}
+.navbar-default .navbar-nav > li > a{color: $base-1a}
+.navbar-default .navbar-nav > li > a:hover{color: $base-1b}
+nav.navbar.navbar-default{margin-bottom: 0px}//default->20
+//NAV BUTTON
+.navbar-default .navbar-toggle:hover{background-color: $base-4a};
+.navbar-default .navbar-toggle .icon-bar{background-color:$base-1a}
+.navbar-default .navbar-toggle .icon-bar:hover{background-color:$base-1b}
+.navbar-default .navbar-toggle{border-color:$base-1a}
+.navbar-default .navbar-toggle:hover{border-color:$base-1b}
 
 //FORM
 .form-control:focus {
-  border-color: $primary-red;
+  border-color: $base-1a;
   outline: 0;
-  -webkit-box-shadow: none; //-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
-  box-shadow: none; //box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+  -webkit-box-shadow: none;
+  //-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6); box-shadow: none;
+  //box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
 }
 //LOGIN
 input#user_email, input#user_password,
 input#user_username, input#user_password_confirmation,
 input#user_current_password{
-  background-color:$secondary-white;
+  background-color:$base-4b;
   border:none;
-  border:1px solid $primary-grey;
+  border:1px solid $base-2a;
   border-radius:0px;
   height:30px;
   width:250px;
-  -webkit-box-shadow: 0 0 0px 1000px  $primary-white inset; //for chromeputridyellow
+  -webkit-box-shadow: 0 0 0px 1000px  $base-4a inset; //for chromeputridyellow
 }
 input#user_email:focus, input#user_password:focus,
 input#user_username:focus, input#user_password_confirmation:focus,
 input#user_current_password:focus{
-  border-color: $primary-red;
+  border-color: $base-1a;
   outline: 0; //for safariblueglowofdespair
 }
-//DEVISE ERRORS
-div#error_explanation{background-color: $secondary-white; width: 250px}
-div#error_explanation h2{font-size:16px; color:$primary-grey}
-div#error_explanation ul li{color:$secondary-grey; list-style-type: disc;}
 
-//MAIN BUTTON
+//BUTTON
 .btn{border-radius:4px; width:150px; }
 .btn-success {
-  color:  $primary-white;
-  background-color: $primary-blue;
-  border-color: $primary-white;
+  background-color: $base-3a;
+  color:  $base-4a;
+  border-color: $base-4a;
 }
 .btn-success:focus,
 .btn-success.focus,
@@ -108,13 +103,13 @@ fieldset[disabled] .btn-success:hover,
 fieldset[disabled] .btn-success:focus,
 .btn-success.disabled.focus,
 .btn-success[disabled].focus,
-fieldset[disabled] .btn-success.focus{
-  color:  $primary-white;
-  background-color: $secondary-blue;
-  border-color: $primary-white;
+fieldset[disabled] .btn-success.focus {
+  background-color: $base-3b;
+  color:  $base-4a;
+  border-color: $base-4a;
 }
 
 //MEDIA QUERIES
 @media (min-width: 768px) {
-  li.nav-devise-user{margin:15px 0 0 0}
+  li.margin-b-15{margin:15px 0 0 0} //nav username
 }

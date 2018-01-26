@@ -1,14 +1,14 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-8">
-      <h1 class="color-grey margin-10"><small class="font-16">new</small>EigoPosts</h1>
+      <h1 class="color-1a margin-10"><small class="">new</small>EigoPosts</h1>
       <hr>
       <% @posts.each do |post_l| %>
-        <h4 class="color-red margin-5"><%= link_to post_l.post_title, post_l %></h4>
-        <p class="lead color-grey margin-5"><%= link_to truncate(post_l.post_body, :length => 90), post_l %></p>
-        <small class="color-grey">submitted <%= time_ago_in_words(post_l.created_at) %> ago by </small>
-        <small class="color-blue"><%= post_l.user.username %></small>
-        <small class="color-grey pull-right"><%= link_to post_l.comments.size, post_l %> comments</small>
+        <h4 class="color-2a margin-5"><%= link_to post_l.post_title, post_l %></h4>
+        <p class="lead color-2b margin-5"><%= link_to truncate(post_l.post_body, :length => 90), post_l %></p>
+        <small class="color-2a">submitted <%= time_ago_in_words(post_l.created_at) %> ago by </small>
+        <small class="color-1b"><%= post_l.user.username %></small>
+        <small class="color-2a pull-right"><%= link_to post_l.comments.size, post_l %> comments</small>
         <hr>
       <% end %>
     </div>
