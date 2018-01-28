@@ -54,5 +54,30 @@
 
     <%= yield %>
 
+    <footer>
+      <div class="container">
+        <div class="row text-center">
+            <div class="hidden-xs col-sm-6">
+              <p class="lead padding-lr-5p">Here is where some info about EigoPost could be.
+                 And why it was started and what its purpose is.<br>
+                 And perhaps a quote or something.</p>
+            </div>
+            <div class="col-sm-6">
+              <ul>
+                <li><%= link_to "EigoPost 1", root_path %></li>
+                <li><%= link_to "EigoPost 2", root_path %></li>
+                <li><%= link_to "EigoPost 3", root_path %></li>
+                <li><%= link_to "EigoPost 4", root_path %></li>
+              </ul>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 text-center footer-color">
+            <p class="lead">© 2018: <a href="https://www.eigopost.com"><strong> EigoPost.com</strong></a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
   </body>
 </html>

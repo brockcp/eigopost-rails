@@ -3,7 +3,27 @@
 @import "font-awesome";
 @import "color-variables";
 
-//COLOR SCHEME
+//NAV
+.navbar-default{background-color:  $base-4a}
+.navbar-default .navbar-brand{color: $base-1a}
+.navbar-default .navbar-brand:hover{color: $base-1b}
+.navbar-default .navbar-nav > li > a{color: $base-1a}
+.navbar-default .navbar-nav > li > a:hover{color: $base-1b}
+nav.navbar.navbar-default{margin-bottom: 0px}//default:20
+//NAV BUTTON
+.navbar-default .navbar-toggle:hover{background-color: $base-4a};
+.navbar-default .navbar-toggle .icon-bar{background-color:$base-1a}
+.navbar-default .navbar-toggle .icon-bar:hover{background-color:$base-1b}
+.navbar-default .navbar-toggle{border-color:$base-1a}
+.navbar-default .navbar-toggle:hover{border-color:$base-1b}
+
+//FOOTER
+footer{padding:40px; background-color: $base-2b}
+footer ul{list-style-type: none; margin-right: 20px; font-size: large;}
+footer ul li a{color:$base-2a}
+footer ul li a:hover{text-decoration: none; color:$base-2c}
+
+//COLORS
 .color-1a, .color-1a a, h3.color-1a, h1.color-1a, h4.color-1a a, p.color-1a, p.color-1a a {
   color: $base-1a}
 .color-1b, .color-1b a, h3.color-1b, h1.color-1b, h4.color-1b a, p.color-1b, p.color-1b a {
@@ -15,15 +35,21 @@
 .color-3a {color: $base-3a}
 .color-3b {color: $base-3b}
 .color-4a {color: $base-4a}
-.color-4b {color: $base-4b}
+.color-4b, h6.color-4b {color: $base-4b}
+.footer-color p a{color: $base-2c}
+.footer-color p a:hover{ color: $base-4b}
 
-//MISCELLANEOUS
+//BOX & MISCELLANEOUS
+hr{margin: 10px 0}
 .margin-0{margin:0}
 .margin-5{margin:5px}
 .margin-10{margin:10px}
 .margin-l-30{margin:0 0 0 30%}
 li.margin-b-15{margin:0 0 0 15px} //@768px nav username
-hr{margin: 10px 0}
+.padding-b-30{padding-bottom:30px}
+
+.padding-tb-30-15{padding: 30px 15px}
+.padding-lr-5p{padding: 0 5%}
 .container-fluid .jumbotron{border-radius:0}
 .border-grey{border: 1px solid #eeeeee}
 .height-filler{height:500px}
@@ -33,33 +59,15 @@ hr{margin: 10px 0}
 a.glyphicon{color: $base-3b; text-align: center}
 div.alert.alert-dismissible.alert-success{background-color: #ffffdd; border-color: #ffffdd; color: $base-2a; border-radius:0}
 div.alert.alert-warning{background-color: #ffeedd; border-color: #ffeedd; color: $base-2a; border-radius:0}
-//DEVISE ERRORS
 div#error_explanation{background-color: $base-4b; width: 250px}
 div#error_explanation h2{font-size:16px; color:$base-2a}
 div#error_explanation ul li{color:$base-2b; list-style-type: disc;}
 
-//NAV
-.navbar-default{background-color:  $base-4a}
-.navbar-default .navbar-brand{color: $base-1a}
-.navbar-default .navbar-brand:hover{color: $base-1b}
-.navbar-default .navbar-nav > li > a{color: $base-1a}
-.navbar-default .navbar-nav > li > a:hover{color: $base-1b}
-nav.navbar.navbar-default{margin-bottom: 0px}//default->20
-//NAV BUTTON
-.navbar-default .navbar-toggle:hover{background-color: $base-4a};
-.navbar-default .navbar-toggle .icon-bar{background-color:$base-1a}
-.navbar-default .navbar-toggle .icon-bar:hover{background-color:$base-1b}
-.navbar-default .navbar-toggle{border-color:$base-1a}
-.navbar-default .navbar-toggle:hover{border-color:$base-1b}
-
 //FORM
-.form-control:focus {
-  border-color: $base-1a;
-  outline: 0;
-  -webkit-box-shadow: none;
+.form-control:focus { border-color: $base-1a; outline: 0; -webkit-box-shadow: none}
   //-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6); box-shadow: none;
   //box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
-}
+
 //LOGIN
 input#user_email, input#user_password,
 input#user_username, input#user_password_confirmation,
@@ -106,10 +114,10 @@ fieldset[disabled] .btn-success:focus,
 fieldset[disabled] .btn-success.focus {
   background-color: $base-3b;
   color:  $base-4a;
-  border-color: $base-4a;
+  border-color: $base-4b;
 }
 
-//MEDIA QUERIES
+/////////////MEDIA QUERIES/////////////
 @media (min-width: 768px) {
-  li.margin-b-15{margin:15px 0 0 0} //nav username
+ li.margin-b-15{margin:15px 0 0 0} //nav username
 }

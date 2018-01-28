@@ -1,8 +1,11 @@
 $base-1a: #e60000 !default;
-$base-1b: #ff4d4d !default;
+$base-1b: #cc0000 !default;
 $base-2a: #555555 !default;
-$base-2b: #999999 !default;
+$base-2b: #666666 !default;
+$base-2c: #999999 !default;
 $base-3a: #3385ff !default;
 $base-3b: #4d94ff !default;
 $base-4a: #ffffff !default;
 $base-4b: #fff7f7 !default;
+$base-6: darken($base-1a, 10%) !default;
+$base-7: lighten($base-1a, 10%) !default;
