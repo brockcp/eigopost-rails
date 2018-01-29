@@ -2,7 +2,7 @@
 @import "bootstrap";
 @import "font-awesome";
 @import "color-variables";
-
+.bborder{border:1px solid red}
 //NAV
 .navbar-default{background-color:  $base-4a}
 .navbar-default .navbar-brand{color: $base-1a}
@@ -10,6 +10,7 @@
 .navbar-default .navbar-nav > li > a{color: $base-1a}
 .navbar-default .navbar-nav > li > a:hover{color: $base-1b}
 nav.navbar.navbar-default{margin-bottom: 0px}//default:20
+li.margin-b-15{margin:0 0 0 15px} //@768px nav username
 //NAV BUTTON
 .navbar-default .navbar-toggle:hover{background-color: $base-4a};
 .navbar-default .navbar-toggle .icon-bar{background-color:$base-1a}
@@ -18,7 +19,7 @@ nav.navbar.navbar-default{margin-bottom: 0px}//default:20
 .navbar-default .navbar-toggle:hover{border-color:$base-1b}
 
 //FOOTER
-footer{padding:40px; background-color: $base-2b}
+footer{padding:40px; background-color: $base-2b;}
 footer ul{list-style-type: none; margin-right: 20px; font-size: large;}
 footer ul li a{color:$base-2a}
 footer ul li a:hover{text-decoration: none; color:$base-2c}
@@ -38,28 +39,31 @@ footer ul li a:hover{text-decoration: none; color:$base-2c}
 .color-4b, h6.color-4b {color: $base-4b}
 .footer-color p a{color: $base-2c}
 .footer-color p a:hover{ color: $base-4b}
+.fff{background-color:$base-1c}
 
 //BOX & MISCELLANEOUS
 hr{margin: 10px 0}
 .margin-0{margin:0}
 .margin-5{margin:5px}
 .margin-10{margin:10px}
-.margin-l-30{margin:0 0 0 30%}
-li.margin-b-15{margin:0 0 0 15px} //@768px nav username
+.margin-l-30{margin-left: 30%}
 .padding-b-30{padding-bottom:30px}
-
+.padding-b-100{padding-bottom:100px}
+.padding-b-200{padding-bottom:200px}
 .padding-tb-30-15{padding: 30px 15px}
 .padding-lr-5p{padding: 0 5%}
-.container-fluid .jumbotron{border-radius:0}
-.border-grey{border: 1px solid #eeeeee}
-.height-filler{height:500px}
-
+.padding-lr-15p{padding: 0 15%}
+.margin-lr-5p{margin: 0 5%}
+.container-fluid .jumbotron{border-radius:0; background-color:$base-3d}
+ .sidebar{border:1px solid $base-2c; height:500px}
 //ICONS/ALERTS
 .vote-arrows{width:20px; text-align: center;}
 a.glyphicon{color: $base-3b; text-align: center}
-div.alert.alert-dismissible.alert-success{background-color: #ffffdd; border-color: #ffffdd; color: $base-2a; border-radius:0}
-div.alert.alert-warning{background-color: #ffeedd; border-color: #ffeedd; color: $base-2a; border-radius:0}
-div#error_explanation{background-color: $base-4b; width: 250px}
+div.alert.alert-dismissible.alert-success{background-color: $base-3d; border-color: $base-3d; color: $base-2a; border-radius:0}
+div.alert.alert-warning{background-color: $base-3d; border-color: $base-3d; color: $base-2a; border-radius:0}
+div.alert.alert-danger{background-color: $base-3d; border-color: $base-3d; color: $base-2a; border-radius:0}
+
+div#error_explanation{background-color: $base-3d; width: 250px}
 div#error_explanation h2{font-size:16px; color:$base-2a}
 div#error_explanation ul li{color:$base-2b; list-style-type: disc;}
 
@@ -84,13 +88,14 @@ input#user_email:focus, input#user_password:focus,
 input#user_username:focus, input#user_password_confirmation:focus,
 input#user_current_password:focus{
   border-color: $base-1a;
+  background-color:$base-3d;
   outline: 0; //for safariblueglowofdespair
 }
 
 //BUTTON
 .btn{border-radius:4px; width:150px; }
 .btn-success {
-  background-color: $base-3a;
+  background-color: $base-2a;
   color:  $base-4a;
   border-color: $base-4a;
 }
@@ -112,7 +117,7 @@ fieldset[disabled] .btn-success:focus,
 .btn-success.disabled.focus,
 .btn-success[disabled].focus,
 fieldset[disabled] .btn-success.focus {
-  background-color: $base-3b;
+  background-color: $base-2b;
   color:  $base-4a;
   border-color: $base-4b;
 }

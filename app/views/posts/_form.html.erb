@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm-7">
+    <div class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-0">
       <h3 class="color-2a">New Post</h3>
       <%= form_for post do |f| %>
         <% if post.errors.any? %>
@@ -16,13 +16,13 @@
         <div class="form-group">
           <%= form_group_tag(post.errors[:post_title]) do %>
             <%#= f.label :post_title %>
-            <%= f.text_field :post_title, autofocus: true, class: 'form-control', placeholder: "title of post" %>
+            <%= f.text_field :post_title, autofocus: true, class: 'form-control', placeholder: "title" %>
           <% end %>
         </div>
         <div class="form-group" %>
           <%= form_group_tag(post.errors[:post_body]) do %>
             <%#= f.label :post_body %>
-            <%= f.text_area :post_body, rows: 8, class: 'form-control', placeholder: "your post" %>
+            <%= f.text_area :post_body, rows: 8, class: 'form-control', placeholder: "post" %>
           <% end %>
         </div>
         <div class="form-group" %>
@@ -30,8 +30,7 @@
         </div>
       <% end %>
     </div>
-    <div class="col-sm-5 border-grey height-filler">
-      SIDEBAR
+    <div class="hidden-xs hidden-sm col-md-4 sidebar">
     </div>
   </div>
 </div>

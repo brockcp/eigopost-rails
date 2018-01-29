@@ -1,11 +1,11 @@
-<div class="container">
- <div class="row">
-  <div class="col-md-8">
-    <h3 class="color-2">Forgot your password?</h3>
+<div class="container padding-b-100">
+ <div class="row text-center">
+  <div class="col-sm-6 col-md-4 col-md-offset-2">
+    <h3 class="color-2a">Forgot password?</h3>
     <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
       <%= devise_error_messages! %>
         <div class="field">
-          <%= f.label :email, class: "color-2" %><br />
+          <%= f.label :email, class: "color-2a" %><br />
           <%= f.email_field :email, autofocus: true %>
         </div>
         <br>
@@ -13,10 +13,10 @@
           <%= f.submit "Reset Password", class: "btn btn-success" %>
         </div>
     <% end %>
-    <span class="color-2-devise"><%= render "devise/shared/links" %></span>
+    <br>
+    <span class="color-2a"><%= render "devise/shared/links" %></span>
   </div>
-  <div class="col-md-4 border-grey height-filler">
-    SIDEBAR
+  <div class="hidden-xs col-sm-6 col-md-4 sidebar">
   </div>
  </div>
 </div>

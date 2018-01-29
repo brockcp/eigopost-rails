@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container padding-b-30">
   <div class="row">
     <div class="col-sm-8">
       <h1 class="color-1a margin-10"><small class="">new</small>EigoPosts</h1>
@@ -11,10 +11,10 @@
         <small class="color-2a pull-right"><%= link_to post_l.comments.size, post_l %> comments</small>
         <hr>
       <% end %>
-    </div>
-    <div class="col-sm-4 border-grey height-filler">
       <%= link_to "New Post", new_post_path, class: "btn btn-success margin-10" %>
-      SIDEBAR
+    </div>
+    <div class="col-sm-4 hidden-xs sidebar">
+      <%= link_to "New Post", new_post_path, class: "btn btn-success margin-10" %>
     </div>
   </div>
 </div>
