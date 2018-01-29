@@ -1,13 +1,13 @@
 $base-1a: #e60000 !default;
 $base-1b: darken($base-1a, 5%) !default;
-$base-1c: lighten($base-1a, 5%) !default;
+$base-1c: lighten($base-1a, 15%) !default;
 $base-2a: #777777 !default;
 $base-2b: darken($base-2a, 10%) !default;
 $base-2c: lighten($base-2a, 10%) !default;
-$base-3c: lighten($base-2a, 50%) !default;
+$base-2d: lighten($base-2a, 50%) !default;
 $base-3a: #0066ff !default;
 $base-3b: darken($base-3a, 15%) !default;
-$base-3c: lighten($base-3b, 10%) !default;
+$base-3c: lighten($base-3a, 10%) !default;
 $base-3d: lighten($base-3a, 47%) !default;
 $base-4a: #ffffff !default;
-$base-4b: #f0f0f5 !default
+$base-4b: #f0f0f5 !default;

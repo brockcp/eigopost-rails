@@ -46,7 +46,7 @@
         <%= flash[:notice] %>
       </div>
     <% elsif flash[:alert] %>
-      <div class="alert alert-warning">
+      <div class="alert alert-dismissible alert-warning">
         <button type="button" class="close" data-dismiss="alert">&times;</button>
         <%= flash[:alert] %>
       </div>
@@ -56,24 +56,22 @@
 
     <footer>
       <div class="container">
-        <div class="row text-center">
-            <div class="hidden-xs col-sm-6">
-              <p class="lead padding-lr-5p">Here is where some info about EigoPost could be.
-                 And why it was started and what its purpose is.<br>
-                 And perhaps a quote or something.</p>
+        <div class="row">
+            <div class="hidden-xs col-sm-5 col-sm-offset-1 text-center">
+              <p class="lead">Get help and give help<br> using <i>real</i> English at EigoPost!</p>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-5 col-sm-pull-1 color-2a text-center">
               <ul>
-                <li><%= link_to "EigoPost 1", root_path %></li>
-                <li><%= link_to "EigoPost 2", root_path %></li>
-                <li><%= link_to "EigoPost 3", root_path %></li>
-                <li><%= link_to "EigoPost 4", root_path %></li>
+                <li><%= link_to "method", root_path %></li>
+                <li><%= link_to "background", root_path %></li>
+                <li><%= link_to "case studies", root_path %></li>
+                <li><%= link_to "legal", root_path %></li>
               </ul>
             </div>
         </div>
         <div class="row">
-          <div class="col-xs-12 text-center footer-color">
-            <p class="lead">© 2018: <a href="https://www.eigopost.com"><strong> EigoPost.com</strong></a></p>
+          <div class="col-xs-12 text-center color-2a">
+            <p class="lead padding-t-20">© 2018 <a href="https://www.eigopost.com"><strong> EigoPost.com</strong></a></p>
           </div>
         </div>
       </div>
