@@ -1,3 +1,11 @@
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: eigopost_db
+  pool: 5
+  username: bcp
+  password: !!!!
+
 development:
   adapter: postgresql
   encoding: unicode
