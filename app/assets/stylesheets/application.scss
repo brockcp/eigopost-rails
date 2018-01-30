@@ -3,7 +3,7 @@
 @import "color-variables";
 
 //NAV
-.navbar-default{background-color: $base-4a}
+.navbar-default{background-color: $base-4a; border-bottom: 1px solid $base-5}
 .navbar-default .navbar-brand{color: $base-1a}
 .navbar-default .navbar-brand:hover{color: $base-1b}
 //.navbar-default .navbar-nav > li:hover{background-color:$base-5}
