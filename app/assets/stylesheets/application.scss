@@ -4,11 +4,12 @@
 @import "color-variables";
 
 //NAV
-.navbar-default{background-color:  $base-4a}
+.navbar-default{background-color: $base-4a; border-bottom: none}
 .navbar-default .navbar-brand{color: $base-1a}
 .navbar-default .navbar-brand:hover{color: $base-1b}
+//.navbar-default .navbar-nav > li:hover{background-color:$base-5}
 .navbar-default .navbar-nav > li > a{color: $base-1a}
-.navbar-default .navbar-nav > li > a:hover{color: $base-1b}
+.navbar-default .navbar-nav > li > a:hover{color: $base-1c}
 nav.navbar.navbar-default{margin-bottom: 0px}//default:20
 li.margin-b-15{margin:0 0 0 15px} //@768px nav username
 //NAV BUTTON
@@ -38,12 +39,14 @@ footer ul li a:hover{text-decoration: none; color:$base-2c}
 .color-3d{color: $base-3d}
 .color-4a{color: $base-4a}
 .color-4b{color: $base-4b}
+a:hover{text-decoration: none}
 
 //BOX & MISCELLANEOUS
 hr{margin: 10px 0}
 .margin-5{margin:5px}
 .margin-10{margin:10px}
 .margin-l-30{margin-left: 30%}
+.padding-r-xs-to-0{padding-right:50px}//@768
 .padding-t-20{padding-top:20px}
 .padding-b-30{padding-bottom:30px}
 .padding-b-100{padding-bottom:100px}
@@ -51,8 +54,8 @@ hr{margin: 10px 0}
 .padding-tb-30-15{padding: 30px 15px}
 .padding-lr-5p{padding: 0 5%}
 .padding-lr-15p{padding: 0 15%}
-.container-fluid .jumbotron{border-radius:0; background-color:$base-3d}
- .sidebar{border:1px solid $base-3c; height:600px}
+.container-fluid .jumbotron{border-radius:0; background-color:$base-3d; border-top:1px solid $base-5; border-bottom:1px solid $base-5}
+.sidebar{border:1px solid $base-2d; height:600px}
 
 //ICONS/ALERTS
 .vote-arrows{width:20px; text-align: center;}
@@ -122,4 +125,6 @@ fieldset[disabled] .btn-success.focus {
 /////////////MEDIA QUERIES/////////////
 @media (min-width: 768px) {
  li.margin-b-15{margin:15px 0 0 0} //nav username
+ .padding-r-sm{padding-right:100px;}
+ .padding-r-xs-to-0{padding-right:0px}
 }
