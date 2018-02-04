@@ -1,7 +1,31 @@
-<div class="container padding-b-200">
- <div class="row text-center">
-  <div class="col-sm-6 col-md-4 col-md-offset-2">
-    <h3 class="color-2a">Resend Confirmation</h3>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EigoPost</title>
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body class="devise-bg">
+
+    <% if flash[:notice] %>
+      <div class="alert alert-dismissible alert-success">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <%= flash[:notice] %>
+      </div>
+    <% elsif flash[:alert] %>
+      <div class="alert alert-dismissible alert-warning">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <%= flash[:alert] %>
+      </div>
+    <% end %>
+
+    <div class="container text-center">
+      <h3 class="devise-logo">EigoPost</h3>
+      <div class="devise-col">
+        <h3 class="color-2a margin-t-0">Resend Confirmation</h3>
     <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
       <%= devise_error_messages! %>
       <div class="field">
@@ -16,7 +40,6 @@
     <% end %>
     <span class="color-2a"><%= render "devise/shared/links" %></span>
   </div>
-  <div class="hidden-xs col-sm-6 col-md-4 sidebar">
-  </div>
- </div>
 </div>
+</body>
+</html>

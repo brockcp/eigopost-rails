@@ -2,6 +2,21 @@
 @import "bootstrap";
 @import "color-variables";
 
+//DEVISE
+body.devise-bg{background-color: $base-2a; margin-top: 0}
+.margin-t-0{margin-top:0}
+.devise-logo{color: $base-4a; margin-top:5%}
+.devise-col{
+  background-color: $base-4a;
+  padding:20px 0;
+  max-width:430px;
+  margin: 0 auto;
+  box-shadow: 0 0 8px rgba(0, 0, 0, .6);
+  border-radius:5px;
+}
+.onaji{position: relative; height:100%; text-align: center;padding-top: 60px;}
+
+
 //NAV
 .navbar-default{background-color: $base-4a; border-bottom: 1px solid $base-5}
 .navbar-default .navbar-brand{color: $base-1a}
@@ -126,4 +141,5 @@ fieldset[disabled] .btn-success.focus {
  li.margin-b-15{margin:15px 0 0 0} //nav username
  .padding-r-sm{padding-right:100px;}
  .padding-r-xs-to-0{padding-right:0px}
+ //.devise-white{margin-top:100px; border-radius:4px}
 }
