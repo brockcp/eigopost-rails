@@ -22,10 +22,10 @@
       </div>
     <% end %>
 
-    <div class="container text-center">
-      <h3 class="devise-logo">EigoPost</h3>
+    <div class="container margin-t-5p text-center">
+    <h2><%= link_to "EigoPost", root_path, class: "devise-logo" %></h2>
       <div class="devise-col">
-        <h3 class="color-2a margin-t-0">Forgot password?</h3>
+        <h2 class="color-2a margin-t-0">forgot password?</h3>
     <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
       <%= devise_error_messages! %>
         <div class="field">
