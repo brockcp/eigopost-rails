@@ -19,7 +19,11 @@ li.margin-b-15{margin:0 0 0 15px} //@768px nav username
 .navbar-default .navbar-toggle:hover{border-color:$base-1b}
 
 //FOOTER
-footer{padding:20px; background-color: $base-2b;}
+footer{padding:20px; background-color: $base-2b;
+	//position: absolute;
+	bottom: 0;
+	width: 100%;
+}
 footer ul{list-style-type: none; font-size: large;}
 footer ul li a{color:$base-2a}
 footer ul li a:hover{text-decoration: none; color:$base-2c}

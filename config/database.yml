@@ -3,21 +3,21 @@ production:
   encoding: unicode
   database: eigopost_db
   pool: 5
-  username: bcp
-  password: !!!!
+  username: brockpatterson
+  password: \\\\
 
 development:
   adapter: postgresql
   encoding: unicode
   database: eigopost_db
   pool: 5
-  username: bcp
-  password: !!!!
+  username: brockpatterson
+  password: \\\\
 
 test:
   adapter: postgresql
   encoding: unicode
   database: eigopost_db
   pool: 5
-  username: bcp
-  password: !!!!
+  username: brockpatterson
+  password: \\\\
