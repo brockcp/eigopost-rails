@@ -3,9 +3,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
-  has_many :posts#, dependent: :destroy
-  has_many :comments#, dependent: :destroy
-  has_many :votes#, dependent: :destroy
+  has_many :posts, dependent: :destroy
+  has_many :comments, dependent: :destroy
+  has_many :votes, dependent: :destroy
 
   def soft_delete
     update_attribute(:deleted_at, Time.current)
