@@ -20,7 +20,7 @@ li.margin-b-15{margin:0 0 0 15px} //@768px nav username
 
 //FOOTER
 footer{padding:20px; background-color: $base-2b;
-	position: absolute;
+	position: relative;
 	bottom: 0;
 	width: 100%;
 }
@@ -66,11 +66,11 @@ hr{margin: 10px 0}
 .vote-arrows{width:20px; text-align: center;}
 a.glyphicon{color: $base-3b; text-align: center}
 div.alert.alert-dismissible.alert-success{background-color: $base-3d; border-color: $base-3d; color: $base-2a; border-radius:0}
-div.alert.alert-warning{background-color: $base-3d; border-color: $base-3d; color: $base-2a; border-radius:0}
+div.alert.alert-warning{background-color: $base-3d; border-color: $base-3d; color: $base-2a; border-radius:0; margin-left:5px; margin-right:5px}
 div.alert.alert-danger{background-color: $base-3d; border-color: $base-3d; color: $base-2a; border-radius:0}
-div#error_explanation{background-color: $base-3d; width: 250px}
+div#error_explanation{width: 250px; margin: 0 auto}
 div#error_explanation h2{font-size:16px; color:$base-2a}
-div#error_explanation ul li{color:$base-2b; list-style-type: disc;}
+div#error_explanation ul li{color:$base-2b; list-style-type: none;}
 
 //DEVISE
 body.devise-bg{background-color: $base-3d; margin-top: 0}
