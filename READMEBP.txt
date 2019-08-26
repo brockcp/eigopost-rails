@@ -1,5 +1,5 @@
 -ACCESS-
-Local-> $ rails s (localhost:3000)
+Local-> $ rails (bash shortcut is 'rails' for rails s). Go to localhost:3000
 heroku-> https://eigopost.herokuapp.com
  -$ heroku login
  -$ heroku git:remote -a eigopost
@@ -42,3 +42,9 @@ NOTE: postgres=> denotes superUser/ postgres=# denotes regular user
 $ rails s   --->  ERROR: pending migrations
 $ rake db:migrate
 $ rails s   --->  VOILA!!!!
+
+8/25/2019
+wouldnt start so...
+ -make sure command is correct - via bash shortcut command is 'rails'
+ -check to see if/what gemset is selected -> $ rvm list gemsets
+ -if necessary, to select gemset, $ rvm use ruby-2.4.1  (current set is ruby-2.4.1)
