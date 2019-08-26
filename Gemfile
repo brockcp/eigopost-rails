@@ -32,7 +32,7 @@ group :development do
   gem 'web-console', '>= 3.3.0'
   gem 'rb-readline'
   #installed 4/1/19 - rails c not working
-    
+
   gem 'listen', '>= 3.0.5', '< 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
@@ -46,6 +46,7 @@ group :development do
   gem 'pry-rails'
 end
 
+gem 'responders', '~> 2.4.1'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'devise'
