@@ -15,5 +15,6 @@ Rails.application.routes.draw do
 
   root 'home#landing'
   get 'about' => 'home#about'
+  get '/404', to: 'errors#not_found'
 
 end

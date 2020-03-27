@@ -22,10 +22,10 @@ li.margin-b-15{margin:0 0 0 15px} //@768px nav username
 
 //FOOTER
 footer{
-	padding:20px;
+	height:200px;
+  padding-bottom:0px;
+  text-align: center;
 	background-color: $base-2b;
-	bottom: 0;
-	min-height: 280px;
 }
 footer ul{list-style-type: none; font-size: large;}
 footer ul li a{color:$base-2a}
@@ -49,6 +49,7 @@ a:hover{text-decoration: none}
 
 //BOX & MISCELLANEOUS
 hr{margin: 10px 0}
+.text-center{text-align: center;}
 .min-h-600{min-height:600px}//FOR EMPTY POST PAGES
 .margin-5{margin:5px}
 .margin-10{margin:10px}
