@@ -17,6 +17,6 @@
 .byebug_history
 
 .DS_Store
-application.yml
+config/application.yml
 config/secrets.yml
 vendor/bootstrap.css

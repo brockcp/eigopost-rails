@@ -5,6 +5,13 @@ heroku-> https://eigopost.herokuapp.com
  -$ heroku git:remote -a eigopost
  -$ heroku run rails console
 
+-DB ACCESS-
+ -$rails c
+ -pry(main)> User.all    //LISTS ALL USERS
+
+-LOCALHOST SIGN IN-
+  brockpatterson.../h...h...
+
 -BUILDNOTES/FEATURES-
 
 -POSTGRES db

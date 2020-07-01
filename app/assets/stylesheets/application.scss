@@ -1,51 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-//@import "color-variables";
-
-$base-1a: #e60000 !default;
-$base-1b: darken($base-1a, 5%) !default;
-$base-1c: lighten($base-1a, 15%) !default;
-$base-2a: #777777 !default;
-$base-2b: darken($base-2a, 10%) !default;
-$base-2c: lighten($base-2a, 10%) !default;
-$base-2d: lighten($base-2a, 50%) !default;
-$base-3a: #0066ff !default;
-$base-3b: darken($base-3a, 15%) !default;
-$base-3c: lighten($base-3a, 10%) !default;
-$base-3d: lighten($base-3a, 47%) !default;
-$base-4a: #ffffff !default;
-$base-4b: #f0f0f5 !default;
-$base-5: #e7e7e7 !default;
-
-
-html, body{height:100%}
-
-//NAV
-.navbar-default{background-color: $base-4a; border-bottom: 1px solid $base-5}
-.navbar-default .navbar-brand{color: $base-1a}
-.navbar-default .navbar-brand:hover{color: $base-1b}
-//.navbar-default .navbar-nav > li:hover{background-color:$base-5}
-.navbar-default .navbar-nav > li > a{color: $base-1a}
-.navbar-default .navbar-nav > li > a:hover{color: $base-1c}
-nav.navbar.navbar-default{margin-bottom: 0px}//default:20
-li.margin-b-15{margin:0 0 0 15px} //@768px nav username
-//NAV BUTTON
-.navbar-default .navbar-toggle:hover{background-color: $base-4a};
-.navbar-default .navbar-toggle .icon-bar{background-color:$base-1b}
-.navbar-default .navbar-toggle .icon-bar:hover{background-color:$base-1c}
-.navbar-default .navbar-toggle{border-color:$base-1a}
-.navbar-default .navbar-toggle:hover{border-color:$base-1b}
-
-//FOOTER
-footer{
-	height:200px;
-  padding-bottom:0px;
-  text-align: center;
-	background-color: $base-2b;
-}
-footer ul{list-style-type: none; font-size: large;}
-footer ul li a{color:$base-2a}
-footer ul li a:hover{text-decoration: none; color:$base-2c}
+@import "color-variables";
 
 //COLORS
 .color-1a{color: $base-1a}
@@ -63,7 +18,33 @@ footer ul li a:hover{text-decoration: none; color:$base-2c}
 .color-4b{color: $base-4b}
 a:hover{text-decoration: none}
 
-//BOX & MISCELLANEOUS
+html, body{
+	height:100%;
+  font-size:100%;
+	font-family: 'Helvetica', Times, serif;
+}
+
+//NAV
+.navbar-default{background-color: $base-4a; border-bottom: 1px solid $base-5}
+.navbar-default .navbar-brand{color: $base-1a}
+.navbar-default .navbar-brand:hover{color: $base-1b}
+//.navbar-default .navbar-nav > li:hover{background-color:$base-5}
+.navbar-default .navbar-nav > li > a{color: $base-1a}
+.navbar-default .navbar-nav > li > a:hover{color: $base-1c}
+nav.navbar.navbar-default{margin-bottom: 0px}//default:20
+li.margin-b-15{margin:0 0 0 15px} //@768px nav username
+//NAV BUTTON/HAMBURGER
+.navbar-default .navbar-toggle:hover{background-color: $base-4a};
+.navbar-default .navbar-toggle .icon-bar{background-color:$base-1b}
+.navbar-default .navbar-toggle .icon-bar:hover{background-color:$base-1c}
+.navbar-default .navbar-toggle{border-color:$base-1a}
+.navbar-default .navbar-toggle:hover{border-color:$base-1b}
+
+//MAIN
+.container-fluid .jumbotron{border-radius:0; background-color:$base-3d; border-top:1px solid $base-5; border-bottom:1px solid $base-5}
+.title{font-size:1.5rem;}
+.logo{max-width:100px;}
+.inline-b{display:inline-block;}
 hr{margin: 10px 0}
 .text-center{text-align: center;}
 .min-h-600{min-height:600px}//FOR EMPTY POST PAGES
@@ -80,8 +61,18 @@ hr{margin: 10px 0}
 .padding-tb-40-25{padding: 40px 25px}
 .padding-lr-5p{padding: 0 5%}
 .padding-lr-15p{padding: 0 15%}
-.container-fluid .jumbotron{border-radius:0; background-color:$base-3d; border-top:1px solid $base-5; border-bottom:1px solid $base-5}
 .sidebar{border:1px solid $base-2d; height:600px}
+
+//FOOTER
+footer{
+	height:200px;
+  padding-bottom:0px;
+  text-align: center;
+	background-color: $base-2b;
+}
+footer ul{list-style-type: none; font-size: large;}
+footer ul li a{color:$base-2a}
+footer ul li a:hover{text-decoration: none; color:$base-2c}
 
 //ICONS/ALERTS
 .vote-arrows{width:20px; text-align: center;}
