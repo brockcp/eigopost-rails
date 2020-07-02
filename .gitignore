@@ -20,3 +20,10 @@
 config/application.yml
 config/secrets.yml
 vendor/bootstrap.css
+
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
